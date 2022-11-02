@@ -1,12 +1,12 @@
 const fs = require('fs');
 const path = require('path');
-const {readdir} = require('fs/promises');
+const { readdir } = require('fs/promises');
 
 let newPath = path.join(__dirname, 'secret-folder');
 
 readdir(newPath, {
-		withFileTypes: true
-	})
+	withFileTypes: true
+})
 	.then((data) => data.forEach(file => {
 
 		const filePath = path.join(newPath, file.name);
